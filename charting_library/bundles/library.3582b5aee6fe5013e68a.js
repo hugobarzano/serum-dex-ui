@@ -75218,12 +75218,10 @@
                           var n = re.factoryDefaults(
                               'chartproperties.volumePaneSize',
                             ),
-                            r = e._model
-                              .model()
-                              .createStudyInserter({
-                                type: 'java',
-                                studyId: 'Volume@tv-basicstudies',
-                              });
+                            r = e._model.model().createStudyInserter({
+                              type: 'java',
+                              studyId: 'Volume@tv-basicstudies',
+                            });
                           r.setForceOverlay(d.enabled('volume_force_overlay')),
                             r.setPaneSize(n),
                             d.enabled('hide_volume_ma') &&
@@ -81330,15 +81328,12 @@
                 n
                   .properties()
                   .scalesProperties.mergeAndFire(e.scalesProperties)),
-              n
-                .mainSeries()
-                .priceScale()
-                .setMode({
-                  autoScale: t.priceAxisProperties.autoScale,
-                  percentage: t.priceAxisProperties.percentage,
-                  log: t.priceAxisProperties.log,
-                  lockScale: t.priceAxisProperties.lockScale,
-                }),
+              n.mainSeries().priceScale().setMode({
+                autoScale: t.priceAxisProperties.autoScale,
+                percentage: t.priceAxisProperties.percentage,
+                log: t.priceAxisProperties.log,
+                lockScale: t.priceAxisProperties.lockScale,
+              }),
               n.mainSeries().properties().mergeAndFire(t),
               n.mainSeries().properties().saveDefaults(),
               n.mainSeries().createPaneView(),
